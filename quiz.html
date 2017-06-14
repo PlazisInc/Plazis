@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Quiz - Plazis</title>
+		<link rel="stylesheet" href="css/main.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<link rel="icon" href="goo.gl/5XrW8U">
+	</head>
+	<body>
+		<header class="navbar navbar-inverse">
+		 <div class="container">
+		  	<nav role="navigation">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			    <a class="navbar-brand-plazis" href=""><img src="images/plazis.jpg" alt="" width="64" height="45" border="" /></a>
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" id="orange5" href="index.html"><!--font color = green><font size = 4-->PLAZIS<!--/font color = green></font size = 4--></a>
+			      <a class="navbar-brand" href="quiz.html">Quiz</a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			      <!-- li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li -->
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+						<li><a href="index.html">Home</a></li>
+			            <li><a href="contact.html">Contact</a></li>
+			            <li><a href="about.html">About</a></li>
+			            <li><a href="blog.html">Blog</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a class="comingsoon" href="#">COMING SOON!</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			      <a target="_blank" class="navbar-brand-steam" href="http://bit.ly/2rVB2qO"><img src="images/steam.png" alt="" width="150" height="45" border="" /></a>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		  </div>
+		</header>
+
+		<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><center>Quiz</center></div>
+						<div class="panel-body">
+		<!--img class="image-new" src="http://bit.ly/2pStxQi" alt="" width="1280" height="720"-->
+		<center><h3>Hvor let bliver du tilted fra 1-5?</h3>
+        <select id="s1">
+            <option id="1" value="1">1
+                <option id="2" value="2">2
+                    <option id="3" value="3">3
+                        <option id="4" value="3">4
+                            <option id="5" value="3">5
+        </select>
+        	<h3>Hvor mange timer Minecraft spiller du om dagen?</h3>
+        <select id="s2">
+            <option id="0" value="0">0 timer
+                <option id="1" value="1">1 time
+                    <option id="2" value="2">2 timer
+                        <option id="3" value="3">3-4 timer
+                            <option id="4" value="4">5+ timer
+
+        </select>
+
+        	<h3>Hvor tit banker du i dit bord?</h3>
+        <select id="s3">
+            <option id="0" value="0">Aldrig
+                <option id="1" value="1">Max 1 gang om dagen
+                    <option id="2" value="2">Omkring 5 gange
+                        <option id="3" value="3">Hver gang jeg dør
+                            <option id="4" value="4">Gakki niveau
+
+        </select>
+        <br>
+        	<h2 id="demo"><i>Klik for at se facit</i></h2>
+        <button onclick="myBtn()">Klik her</button></center>
+
+        <script>
+            function myBtn() {
+                var v1 = document.getElementById("s1").value;
+                var v2 = document.getElementById("s2").value;
+                var v3 = document.getElementById("s3").value;
+                var c1 = Number(v1);
+                var c2 = Number(v2)
+                var c3 = Number(v3)
+                var sum = c1 + c2 + c3
+                if (sum < 2) {
+                    document.getElementById("demo").innerHTML = "Du virker som en meget rolig person :)"
+                } else if (sum < 5) {
+                    document.getElementById("demo").innerHTML = "Du kunne være bedre, men stadig meget værre"
+                } else if (sum < 10) {
+                    document.getElementById("demo").innerHTML = "Du rager alt for meget!"
+                } else {
+                    document.getElementById("demo").innerHTML = "Gakki?"
+                }
+            }
+        </script>
+				
+	
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!--footer class="w3-padding-32">
+		  <p><center>Powered by HTML--><!--a href="" title="" target="" class=""></a--><!--/center></p>
+		</footer-->
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Footer -->
+	</body>
+</html>
